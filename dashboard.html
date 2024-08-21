@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicine Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Telemedicine Dashboard</h1>
+        <button id="logout-button">Logout</button>
+    </header>
+    <main>
+        <section id="consultations">
+            <h2>Doctor Consultations</h2>
+            <form id="consultation-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="issue">Issue:</label>
+                <textarea id="issue" rows="4" required></textarea>
+                <button type="submit">Request Consultation</button>
+            </form>
+            <div id="consultation-response"></div>
+        </section>
+
+        <section id="health-monitoring">
+            <h2>Health Monitoring</h2>
+            <form id="monitoring-form">
+                <label for="temperature">Temperature (°C):</label>
+                <input type="number" id="temperature" step="0.1" required>
+                <label for="blood-pressure">Blood Pressure (mmHg):</label>
+                <input type="text" id="blood-pressure" required>
+                <button type="submit">Submit Data</button>
+            </form>
+            <div id="health-suggestions"></div>
+        </section>
+
+        <section id="medicine-suggestions">
+            <h2>Medicine Suggestions</h2>
+            <form id="medicine-form">
+                <label for="symptoms">Symptoms:</label>
+                <textarea id="symptoms" rows="4" required></textarea>
+                <button type="submit">Get Medicine Suggestions</button>
+            </form>
+            <div id="medicine-response"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
